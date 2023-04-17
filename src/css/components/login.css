@@ -1,0 +1,51 @@
+.otp-input {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.otp-input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 0.2rem rgba(50, 115, 220, 0.25);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.pro{
+  height: 400px;
+  width: 100%;
+}
+.chart-container {
+  border-bottom: 0.5px solid grey;
+}
+.heading{
+  font-size: 20px;
+  font-family:4% ;
+  color:aqua
+ 
+  
+}
+.MuiInputBase-input {
+  height: '1.1em !important';
+}
+
+input#\:R5akm\: {
+  /* height: 10px; */
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 3px;
+}
+.chart-container{
+  border-bottom: 0.5px solid #eee;
+}
