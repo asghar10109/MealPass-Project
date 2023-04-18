@@ -163,9 +163,9 @@ const Index: React.FC = () => {
 
               <InputWrapper outerClassName="sm:col-span-12">
                 <input type="text" className="w-full h-10 px-2 mb-8 border-gray-300 rounded-md border" placeholder="Product Title" />
-              <textarea rows={4} className="w-full h-20 px-2 mb-8 border-gray-300 rounded-md border" placeholder="Product Description"></textarea>
-              <input type="file" className="w-full h-20 px-2 border-gray-300 rounded-md border pt-7" placeholder="Product Description" />
-                </InputWrapper>
+                <textarea rows={4} className="w-full h-20 px-2 mb-8 border-gray-300 rounded-md border" placeholder="Product Description"></textarea>
+                <input type="file" className="w-full h-20 px-2 border-gray-300 rounded-md border pt-7" placeholder="Product Description" />
+              </InputWrapper>
 
 
 

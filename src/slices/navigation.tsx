@@ -1,20 +1,22 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {
-  FiToggleLeft,
-  FiList,
+  // FiToggleLeft,
+  // FiList,
   FiActivity,
-  FiCalendar,
-  FiStar,
-  FiDroplet,
-  FiGrid,
-  FiClock,
-  FiCopy,
-  FiUser,
-  FiPieChart,
+  // FiCalendar,
+  // FiStar,
+  // FiDroplet,
+  // FiGrid,
+  // FiClock,
+  // FiCopy,
+  // FiUser,
+  // FiPieChart,
+  FiFileText,
   FiCompass,
-  FiHelpCircle,
-  FiShoppingCart,
-  FiHome,
+  FiUsers,
+  // FiHelpCircle,
+  // FiShoppingCart,
+  // FiHome,
 } from "react-icons/fi";
 
 export type NavigationState = {
@@ -41,16 +43,16 @@ const initialState: NavigationState[] = [
       {
         url: "/",
         icon: <FiActivity size={20} />,
-        title: "Resturants",
+        title: "Restaurants",
         items: [
           {
-            url: "/social-feed",
-            title: "New Resturant",
+            url: "/admin/restaurants/create",
+            title: "New Restaurant",
             items: [],
           },
           {
-            url: "/tasks",
-            title: "List All Resturant",
+            url: "/admin/restaurants",
+            title: "List All Restaurants",
             items: [],
           },
           
@@ -59,16 +61,16 @@ const initialState: NavigationState[] = [
       {
         url: "/",
         icon: <FiActivity size={20} />,
-        title: "Products",
+        title: "Items",
         items: [
           {
-            url: "/products",
-            title: "Add New Products",
+            url: "/restaurant/items/create",
+            title: "Add New Item",
             items: [],
           },
           {
-            url: "/list-products",
-            title: "List All Products",
+            url: "/restaurant/items",
+            title: "List All Items",
             items: [],
           },
           
@@ -76,31 +78,35 @@ const initialState: NavigationState[] = [
       },
       {
         url: "/",
-        icon: <FiStar size={20} />,
-        title: "Demos",
-        badge: {
-          color: "bg-indigo-500 text-white",
-          text: 6,
-        },
+        icon: <FiUsers size={20} />,
+        title: "Users",
         items: [
           {
-            url: "/demo-1",
-            title: "Light background",
+            url: "/admin/users",
+            title: "List All Users",
             items: [],
           },
-          {
-            url: "/demo-2",
-            title: "Dark background",
-            items: [],
-          },
-          {
-            url: "/demo-3",
-            title: "Small sidebar",
-            items: [],
-          },
+          
         ],
       },
-      
+      {
+        url: "/",
+        icon: <FiFileText size={20} />,
+        title: "Policy",
+        items: [
+          {
+            url: "/admin/terms",
+            title: "Terms & Conditions",
+            items: [],
+          },
+          {
+            url: "/admin/policy",
+            title: "Privacy Policy",
+            items: [],
+          },
+          
+        ],
+      }
     ],
   },
   

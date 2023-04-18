@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
           className="mx-4">
           <FiMenu size={20} />
         </button>
-        <Search />
+        {/* <Search /> */}
 
         <Dropdown6 />
         <span className="ml-auto"></span>
