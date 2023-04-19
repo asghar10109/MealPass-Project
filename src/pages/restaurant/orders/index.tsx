@@ -8,6 +8,7 @@ import {Input} from "components/react-hook-form/input";
 import {NumericInput} from "components/react-hook-form/numeric-input";
 import {Textarea} from "components/react-hook-form/textarea";
 import {ReactSelect} from "components/react-hook-form/react-select";
+import Link from "next/link";
 
 export type FormProps = {
   title: string;
@@ -41,14 +42,14 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <SectionTitle title="" subtitle="Add New Item" />
+      <SectionTitle title="" subtitle="Add Order" />
       <Widget>
         <FormProvider {...methods}>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-6">
               <div className="grid grid-cols-1 gap-y-6 gap-x-6 sm:grid-cols-12">
                 <InputWrapper outerClassName="sm:col-span-12">
-                  <Label id="title">Item Title</Label>
+                  <Label id="title">Order Title</Label>
                   <Input
                     id="title"
                     name="title"
@@ -60,8 +61,8 @@ const Index: React.FC = () => {
                   )}
                 </InputWrapper>
                 
-                <InputWrapper outerClassName="sm:col-span-12">
-                  <Label id="description">Item Description</Label>
+                {/* <InputWrapper outerClassName="sm:col-span-12">
+                  <Label id="description">Order Description</Label>
                   <Textarea
                     id="description"
                     name="description"
@@ -70,10 +71,10 @@ const Index: React.FC = () => {
                   {errors?.description?.message && (
                     <ErrorMessage>{errors.description.message}</ErrorMessage>
                   )}
-                </InputWrapper>
+                </InputWrapper> */}
 
                 <InputWrapper outerClassName="sm:col-span-12">
-                <Label id="item-image">Item Image</Label>
+                <Label id="item-image">Order Image</Label>
                 <div className="w-full h-12 px-4 border-gray-300 rounded-md border pt-2">
                   <input id="fileInput" type="file"/>
                   <input
@@ -87,7 +88,7 @@ const Index: React.FC = () => {
                 </InputWrapper>
 
                 <InputWrapper outerClassName="sm:col-span-12">
-                  <Label id="number">Item Price</Label>
+                  <Label id="number">Order Price</Label>
                   <NumericInput
                     id="number"
                     name="number"
@@ -105,25 +106,7 @@ const Index: React.FC = () => {
                   )}
                 </InputWrapper>
 
-                <InputWrapper outerClassName="sm:col-span-12">
-                  <Label id="react-select-multi">Item Variation</Label>
-                  <ReactSelect
-                    id="react-select-multi"
-                    name="reactSelectMulti"
-                    isMulti={true}
-                    rules={{required: "Variation is required"}}
-                    options={[
-                      {value: "usa", label: "USA"},
-                      {value: "canada", label: "Canada"},
-                      {value: "australia", label: "Australia"},
-                    ]}
-                  />
-                  {errors?.reactSelectMulti?.message && (
-                    <ErrorMessage>
-                      {errors.reactSelectMulti.message}
-                    </ErrorMessage>
-                  )}
-                </InputWrapper>
+                
               </div>
             </div>
 
@@ -136,11 +119,13 @@ const Index: React.FC = () => {
                 className="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 Cancel
               </button>
+              <Link href="/restaurant/orders/details">
               <button
                 type="submit"
                 className="inline-flex justify-center px-3 py-2 ml-3 text-sm font-medium text-white bg-green-500 border border-transparent shadow-sm rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 Submit
               </button>
+              </Link>
             </div>
           </form>
         </FormProvider>

@@ -106,6 +106,44 @@ const initialState: NavigationState[] = [
           },
           
         ],
+      },
+      {
+        url: "/",
+        icon: <FiFileText size={20} />,
+        title: "Setting",
+        items: [
+          {
+            url: "/restaurant/settings/terms",
+            title: "Terms & Conditions",
+            items: [],
+          },
+          {
+            url: "/restaurant/settings/policy",
+            title: "Privacy Policy",
+            items: [],
+          },
+          {
+            url: "/restaurant/settings/help",
+            title: "Help Center",
+            items: [],
+          },
+          
+        ],
+      },
+      {
+        url: "/",
+        icon: <FiFileText size={20} />,
+        title: "Orders",
+        items: [
+          {
+            url: "/restaurant/orders",
+            title: "Order List",
+            items: [],
+          },
+          
+          
+          
+        ],
       }
     ],
   },

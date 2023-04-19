@@ -7,13 +7,13 @@ import { ErrorMessage } from "components/react-hook-form/error-message";
 import { Textarea } from "components/react-hook-form/textarea";
 
 export type FormProps = {
-    policy: string;
+    terms: string;
 };
 
 const Index: React.FC = () => {
     const methods = useForm<FormProps>({
         defaultValues: {
-            policy: "",
+            terms: "",
         },
     });
     const {
@@ -29,7 +29,7 @@ const Index: React.FC = () => {
 
     return (
         <>
-            <SectionTitle title="" subtitle="Privacy Policy" />
+            <SectionTitle title="" subtitle="Terms & Conditions" />
             <Widget>
                 <FormProvider {...methods}>
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -37,14 +37,14 @@ const Index: React.FC = () => {
                             <div className="grid grid-cols-1 gap-y-6 gap-x-6 sm:grid-cols-12">
 
                                 <InputWrapper outerClassName="sm:col-span-12">
-                                    <Label id="policy">Edit Policy</Label>
+                                    <Label id="terms">Help Center</Label>
                                     <Textarea
-                                        id="policy"
-                                        name="policy"
-                                        rules={{ required: "policy is required" }}
+                                        id="terms"
+                                        name="terms"
+                                        rules={{ required: "terms is required" }}
                                     />
-                                    {errors?.policy?.message && (
-                                        <ErrorMessage>{errors.policy.message}</ErrorMessage>
+                                    {errors?.terms?.message && (
+                                        <ErrorMessage>{errors.terms.message}</ErrorMessage>
                                     )}
                                 </InputWrapper>
                             </div>
